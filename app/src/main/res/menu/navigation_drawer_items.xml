@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <group android:checkableBehavior="all">
+        <item
+            android:id="@+id/navigation_item_1"
+            android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:title="首頁" />
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:title="About" />
+        <item
+            android:id="@+id/navigation_item_3"
+            android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:title="關於我" />
+    </group>
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/navigation_item_4"
+            android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+            android:title="測試金流" />
+    </group>
+
+</menu>

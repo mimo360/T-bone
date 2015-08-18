@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 背景色 -->
+    <color name="window_background">#ffffff</color>
+    <!--ActionBar -->
+    <color name="colorPrimary">#FF8888</color>
+    <!-- 狀態列 -->
+    <color name="colorPrimaryDark">#60CC0000</color>
+    <!-- 標題文字 -->
+    <color name="textolorPrimary">#000000</color>
+    <!-- 控制元件選定的顏色 -->
+    <color name="colorAccent">#ff5722</color>
+    <!-- 控制元件預設顏色 -->
+    <color name="colorControlNormal">#000000</color>
+</resources>
