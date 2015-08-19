@@ -47,12 +47,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHoider> implem
 
     @Override
     public void onClick(View v) {
-        if (mOnRecyclerViewItemClickListener != null)
-            mOnRecyclerViewItemClickListener.onItemClick(v, (List<ParseObject>) v.getTag());
+        if (mOnRecyclerViewItemClickListener != null){
+            mOnRecyclerViewItemClickListener.onItemClick(v, (ParseObject) v.getTag());
+        }
     }
 
+
     public static interface OnRecyclerViewItemClickListener{
-        void onItemClick(View view, List<ParseObject> parseObjects);
+        void onItemClick(View view,  ParseObject parseObject);
     }
 
     public void setmOnRecyclerViewItemClickListener(OnRecyclerViewItemClickListener listener){
@@ -81,9 +83,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHoider> implem
         ViewGroup.LayoutParams params = vh.itemView.getLayoutParams();
         params.height = heights.get(position);
         vh.itemView.setLayoutParams(params);
-        vh.itemView.getTag(position);
+        vh.itemView.setTag(parseObjects.get(position));
         Picasso.with(context).load(parseObjects.get(position).getString("url1")).into(vh.imageView);
         vh.textView.setText(parseObjects.get(position).getString("name"));
+
+
     }
 
     @Override

@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -49,13 +50,8 @@ public class MainFragment extends Fragment {
         myAdapter = new MyAdapter(getActivity(), myApplication.parseObjects,MainActivity.stridlist);
         myAdapter.setmOnRecyclerViewItemClickListener(new MyAdapter.OnRecyclerViewItemClickListener() {
             @Override
-            public void onItemClick(View view, List<ParseObject> parseObjects) {
-               MoneyCardFragment moneyCardFragment = new MoneyCardFragment();
-                android.support.v4.app.FragmentManager fm = getFragmentManager();
-                android.support.v4.app.FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.flay,moneyCardFragment);
-                ft.addToBackStack(null);
-                ft.commit();
+            public void onItemClick(View view, ParseObject parseObject) {
+                Snackbar.make(getView(),parseObject.getString("name"),Snackbar.LENGTH_LONG).show();
             }
         });
         rv.setAdapter(myAdapter);
