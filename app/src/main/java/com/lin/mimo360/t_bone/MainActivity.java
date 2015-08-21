@@ -23,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.allpay.tw.mobilesdk.CreateTrade;
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         setnavigation();
         new task().execute();
         pD = ProgressDialog.show(this, "訊息", "下載資料中,請稍等");
+        ImageView imageView = (ImageView)findViewById(R.id.imageView);
+        imageView.setImageResource(R.drawable.ic_logow);
 
 //        Button button = (Button)findViewById(R.id.button2);
 //        button.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
         runOnUiThread(r);
         //test();
        //setupFab();
-       setTab();
+       //setTab();
     }
 
 
@@ -200,12 +203,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setTab() {
-        tab = (TabLayout)findViewById(R.id.tab);
-        tab.setTabGravity(TabLayout.GRAVITY_FILL);
-        tab.addTab(tab.newTab().setText("新上市"));
-        tab.addTab(tab.newTab().setText("好東西"));
-    }
+//    private void setTab() {
+//        tab = (TabLayout)findViewById(R.id.tab);
+//        tab.setTabGravity(TabLayout.GRAVITY_FILL);
+//        tab.addTab(tab.newTab().setText("新上市"));
+//        tab.addTab(tab.newTab().setText("好東西"));
+//    }
 
 //    private void setupFab() {
 //        fab = (FloatingActionButton)findViewById(R.id.fab);

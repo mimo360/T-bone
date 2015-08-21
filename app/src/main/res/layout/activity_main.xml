@@ -22,17 +22,18 @@
             android:layout_width="match_parent"
             android:layout_height= "?attr/actionBarSize"
             android:id="@+id/toobar"
-            android:background="@color/colorPrimary"
+
+
             app:layout_scrollFlags= "scroll|enterAlways"
             />
 
-              <android.support.design.widget.TabLayout
-            android:id="@+id/tab"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
+              <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tab"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/colorPrimary"-->
 
-            />
+            <!--/>-->
 
 </android.support.design.widget.AppBarLayout>
 
@@ -42,7 +43,15 @@
             android:id="@+id/flay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal|top"
+               />
+        </FrameLayout>
 
 
 
